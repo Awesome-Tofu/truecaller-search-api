@@ -1,7 +1,7 @@
 const truesearch = require("truesearch");
 const fs = require('fs');
 
-const data = JSON.parse(fs.readFileSync('phone.json', 'utf8'));
+const data = JSON.parse(fs.readFileSync('/tmp/phone.json', 'utf8'));
 const phoneNumber = data.phone;
 const installationId = data.installationid;
 async function main() {

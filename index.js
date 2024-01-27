@@ -21,7 +21,7 @@ app.get("/", async (req, res) => {
     }
     try {
         const data = { phone: `+${phone.replace(/\s+/g, '').replace('+', '')}`, installationid };
-        await writeFile('phone.json', JSON.stringify(data));
+        await writeFile('/tmp/phone.json', JSON.stringify(data));
         const scriptPath = path.join(__dirname, "truecaller.js");
         const { stdout } = await exec(`node ${scriptPath}`);
         const result = JSON.parse(stdout);
