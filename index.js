@@ -29,7 +29,7 @@ app.get("/", async (req, res) => {
         // res.send(stdout)
     } catch (error) {
         console.error(`exec error: ${error}`);
-        res.send({error: 'Error running oke.js'});
+        res.status(400).send({error: 'Error running trucaller.js'});
     }
 })
 
